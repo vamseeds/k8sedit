@@ -1,0 +1,11 @@
+apiVersion: industries.cx.oracle.com/v1
+kind: IndustriesDomainConfiguration
+metadata:
+  name: automation
+  namespace: dx-vamsi
+spec:
+  Automation:
+    results-bucket-name: automation-fabricConfigurationsResults-dx-prod
+    stream-id: ocid1.stream.oc1.iad.amaaaaaa2cxlxhaaiveh53pew3f6ksojzvphtohpishkfpmaotpfzfzypfqa
+    tenancy-name: cxcomms
+    upload-bucket-name: automation-fabricConfigurations-dx-prod

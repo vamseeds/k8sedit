@@ -1,0 +1,16 @@
+com\oracle\k8sedit\api\API.class
+com\oracle\k8sedit\ForgivingCustomResource.class
+com\oracle\k8sedit\TestK8S.class
+com\oracle\k8sedit\TestK8S2.class
+com\oracle\k8sedit\GreetService.class
+com\oracle\k8sedit\InformerCustomResourceHandler.class
+com\oracle\k8sedit\api\APIList.class
+com\oracle\k8sedit\SimpleGreetService.class
+com\oracle\k8sedit\APIs.class
+com\oracle\k8sedit\api\APISpec.class
+com\oracle\k8sedit\Main.class
+com\oracle\k8sedit\AbstractCRDRepository.class
+com\oracle\k8sedit\Message.class
+com\oracle\k8sedit\InformerResourceHandler.class
+com\oracle\k8sedit\SharedInformerFactoryAndK8sClientSupplier.class
+com\oracle\k8sedit\DefaultInformerFailureAction.class

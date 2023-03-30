@@ -1,0 +1,17 @@
+{
+    "apiVersion": "test.oracle.com/v1",
+    "kind": "API",
+    "metadata": {
+        "generateName": "custom-api3",
+        "labels": {
+            "cxif.owner": "automation"
+        },
+        "name": "custom-api3sgcj4",
+        "namespace": "dx-prod"
+    },
+    "spec": {
+        "api-name": "custom-api3",
+        "api-id": "custom-103",
+        "api-version": "v1"
+    }
+}

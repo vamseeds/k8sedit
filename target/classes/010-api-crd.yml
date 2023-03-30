@@ -1,0 +1,61 @@
+#
+# Copyright (c) 2019, 2020, Oracle and/or its affiliates. All rights reserved.
+#
+
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: apis.test.oracle.com
+spec:
+  group: test.oracle.com
+  names:
+    kind: API
+    singular: api
+    plural: apis
+    shortNames:
+      - ap
+    categories:
+      - test
+  scope: Namespaced
+  versions:
+    - name: v1
+      storage: true
+      served: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            description:
+              description: |
+                meant to capture record level documentation
+              type: string
+            spec:
+              type: object
+              properties:
+                api-name:
+                  description: |
+                    the given name to the API. This name is also part of the default routing path, which can be overridden by
+                    specifying an "alternative-root-path"
+                  type: string
+                  nullable: false
+                api-id:
+                  description: |
+                    the unique ID of the API. This ID is only internally used for configuration cross-references and is shown in
+                    the configration experience
+                  type: string
+                  nullable: false
+                  pattern: "^[a-z0-9]{1,8}-[0-9]{1,4}$"
+                api-version:
+                  description: |
+                    a unique API version identifier. It is by default part of the routing path, which can be overridden by
+                    specifying an "alternative-root-path"
+                  type: string
+                  nullable: false
+              oneOf:
+                - required:
+                    - api-name
+                    - api-id
+                    - api-version
+          oneOf:
+            - required:
+                - spec

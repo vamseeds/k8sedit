@@ -1,0 +1,11 @@
+apiVersion: test.oracle.com/v1
+kind: API
+metadata:
+  name: sundrio-test-api4
+  namespace: dx-prod
+  labels:
+    "test": "hello"
+spec:
+  api-id: sndr-001
+  api-name: sundrio-test-api
+  api-version: v1
